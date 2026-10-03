@@ -85,8 +85,8 @@ export const COMPANY_CONFIG = {
 
   // Verified social profiles (only shown when provided)
   socialLinks: [
-    { name: 'LinkedIn', url: 'https://www.linkedin.com/company/estuscia-group' },
-    { name: 'GitHub', url: 'https://github.com/estusciagroup' },
+    { name: 'LinkedIn', url: 'https://www.linkedin.com/company/estusciagroup' },
+    // { name: 'GitHub', url: 'https://github.com/estusciagroup' },
     { name: 'Parent Portal', url: 'https://www.estusciagroup.com/' },
   ],
 };
