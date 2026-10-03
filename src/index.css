@@ -1,0 +1,114 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Space Grotesk", sans-serif;
+  --font-sans: "Plus Jakarta Sans", sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+
+  --color-brand-primary: #5B3FE4;
+  --color-brand-secondary: #6C4AFF;
+  --color-brand-bright: #8B6CFF;
+  --color-brand-accent: #A78BFA;
+  --color-bg-deep: #050509;
+  --color-bg-secondary: #09071A;
+  --color-bg-panel: #0D0B1F;
+}
+
+:root {
+  color-scheme: dark;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: #050509;
+  color: #F5F3FF;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, .font-heading {
+  font-family: var(--font-display);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #050509;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(139, 108, 255, 0.25);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(139, 108, 255, 0.5);
+}
+
+/* Glowing text utilities */
+.text-glow-purple {
+  text-shadow: 0 0 24px rgba(139, 108, 255, 0.45);
+}
+
+.box-glow-purple {
+  box-shadow: 0 0 35px -5px rgba(108, 74, 255, 0.25);
+}
+
+.box-glow-purple-sm {
+  box-shadow: 0 0 20px -3px rgba(108, 74, 255, 0.18);
+}
+
+/* Grid background texture */
+.cyber-grid-bg {
+  background-image: 
+    linear-gradient(to right, rgba(167, 139, 250, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(167, 139, 250, 0.05) 1px, transparent 1px);
+  background-size: 48px 48px;
+}
+
+.cyber-grid-fine {
+  background-image: 
+    linear-gradient(to right, rgba(167, 139, 250, 0.035) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(167, 139, 250, 0.035) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+/* Radial purple ambient glow */
+.ambient-glow-purple {
+  background: radial-gradient(circle 600px at 50% 30%, rgba(91, 63, 228, 0.18), transparent 70%);
+}
+
+/* Ambient bottom glow */
+.ambient-glow-bottom {
+  background: radial-gradient(ellipse 900px 400px at 50% 100%, rgba(108, 74, 255, 0.15), transparent 75%);
+}
+
+/* Marquee continuous animation */
+@keyframes marquee {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-marquee {
+  display: flex;
+  width: max-content;
+  animation: marquee 28s linear infinite;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+
+/* Pulse radar ring */
+@keyframes pulseRadar {
+  0% { transform: scale(0.95); opacity: 0.8; }
+  50% { transform: scale(1.05); opacity: 0.3; }
+  100% { transform: scale(0.95); opacity: 0.8; }
+}
+
+.animate-pulse-radar {
+  animation: pulseRadar 4s ease-in-out infinite;
+}
