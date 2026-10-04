@@ -26,9 +26,9 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenContact }) => {
     { label: 'Technology', target: 'technology' },
     { label: 'Architecture', target: 'architecture' },
     { label: 'Industries', target: 'industries' },
-    { label: 'Process', target: 'process' },
+    // { label: 'Process', target: 'process' },
     { label: 'The Lab', target: 'lab' },
-    { label: 'Insights', target: 'insights' },
+    // { label: 'Insights', target: 'insights' },
   ];
 
   const handleNavClick = (target: string) => {

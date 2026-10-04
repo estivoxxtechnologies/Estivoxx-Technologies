@@ -74,7 +74,7 @@ export default function App() {
         <IndustriesSection />
 
         {/* 7. Product Development Process: 6-Stage Timeline */}
-        <ProcessSection />
+        {/* <ProcessSection /> */}
 
         {/* 8. Case Study Architecture Blueprints */}
         <CaseStudiesSection onStartProject={(blueprint) => scrollToContact(blueprint)} />
@@ -92,10 +92,10 @@ export default function App() {
         <CompanySection />
 
         {/* 13. Insights & Architecture Articles */}
-        <InsightsSection />
+        {/* <InsightsSection /> */}
 
         {/* 14. Contact Section with Validated RFP Form & Corporate Contacts */}
-        <ContactSection initialProjectType={selectedProjectType} />
+        <ContactSection />
 
         {/* 15. Final High-Impact CTA */}
         <FinalCTA onStartProject={() => scrollToContact()} />
