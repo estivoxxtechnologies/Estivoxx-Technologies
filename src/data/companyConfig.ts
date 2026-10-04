@@ -12,7 +12,7 @@ export const COMPANY_CONFIG = {
     tagline: 'Engineering the Digital Future.',
     subHeadline: 'Software, AI and digital infrastructure engineered for businesses that want to move faster.',
     statement: 'We design and engineer software, AI systems and digital infrastructure that help ambitious businesses build, automate and scale.',
-    ecosystemAffiliation: 'Part of the Estuscia Group technology ecosystem.',
+    ecosystemAffiliation: 'A Member of the Estuscia Group ecosystem.',
   },
   
   parentGroup: {

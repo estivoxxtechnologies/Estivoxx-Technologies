@@ -68,7 +68,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onStartProject, onExpl
         {/* Credibility Statement */}
         <div className="pt-2 flex flex-wrap items-center justify-center gap-2 text-xs font-mono text-[#A8A3B8] pointer-events-auto">
           <ShieldCheck className="w-4 h-4 text-[#8B6CFF]" />
-          <span>Part of the Estuscia Group technology ecosystem.</span>
+          <span>A Member of the Estuscia Group ecosystem.</span>
           <span>·</span>
           <a
             href="https://www.estusciagroup.com/"
