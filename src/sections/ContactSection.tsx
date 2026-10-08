@@ -12,6 +12,7 @@ import {
   ShieldCheck,
   AlertCircle,
 } from 'lucide-react';
+import emailjs from '@emailjs/browser';
 
 export const ContactSection: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -20,7 +21,6 @@ export const ContactSection: React.FC = () => {
     company: '',
     phone: '',
     projectType: 'Custom Software' as ProjectType,
-    budget: '$25,000 - $50,000',
     message: '',
   });
 
@@ -75,18 +75,40 @@ export const ContactSection: React.FC = () => {
     return Object.keys(errs).length === 0;
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
     if (!validate()) return;
 
     setIsSubmitting(true);
 
-    // Replace this with your API/email submission later.
-    setTimeout(() => {
+    try {
+      await emailjs.send(
+        'support_estivoxx',
+        'support_estivoxx_2026',
+        {
+          full_name: formData.fullName,
+          email: formData.email,
+          company: formData.company || 'Not Provided',
+          phone: formData.phone || 'Not Provided',
+          project_type: formData.projectType,
+          message: formData.message,
+          date: new Date().toLocaleString(),
+        },
+        'HtMOlIdlJcgS15sIB'
+      );
+
       setIsSubmitting(false);
       setIsSubmitted(true);
-    }, 900);
+    } catch (error) {
+      console.error('EmailJS Error:', error);
+
+      setIsSubmitting(false);
+
+      alert(
+        'Unable to send your inquiry right now. Please try again or contact us directly.'
+      );
+    }
   };
 
   const handleReset = () => {
@@ -96,7 +118,6 @@ export const ContactSection: React.FC = () => {
       company: '',
       phone: '',
       projectType: 'Custom Software',
-      budget: '$25,000 - $50,000',
       message: '',
     });
 

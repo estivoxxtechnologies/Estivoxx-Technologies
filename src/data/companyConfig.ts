@@ -25,8 +25,8 @@ export const COMPANY_CONFIG = {
   // Corporate Contact (Reference: Estuscia Group Corporate Office)
   contact: {
     registeredOffice: 'Hilite Business Park, Calicut, Kerala, India',
-    corporateEmail: 'estusciagroup@gmail.com',
-    inquiryEmail: 'contact@estivoxx.com',
+    corporateEmail: 'support@estuscia.com',
+    inquiryEmail: 'support@estivoxx.com',
     phoneNumbers: [
       { display: '+91 96333 29669', value: '+919633329669' },
       { display: '+91 96333 59669', value: '+919633359669' },
